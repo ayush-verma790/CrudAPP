@@ -1,8 +1,8 @@
 const Employee=require("../models/Employee");
 exports.createEmployeeData=async(req,res)=>{
     try{
-        const { name, designation, department } = req.body;
-        const response =await Employee.create({name, designation, department });
+        const { name, designation, department,id} = req.body;
+        const response =await Employee.create({name, designation, department,id });
         res.status(200)(
             {
                 success:true,
